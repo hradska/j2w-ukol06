@@ -20,7 +20,7 @@ public class CitatyService {
     }
 
     public String konkretniCitat(int cislo) {
-        if (cislo >= citatyRepository.pocet() || cislo <= 0) {
+        if (cislo > citatyRepository.pocet() || cislo <= 0) {
             return null;
         }
         return citatyRepository.citat(cislo - 1);
